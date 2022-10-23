@@ -232,6 +232,42 @@ msg = {
 //[===] END ISLAMI FITUR [===]//
 
 //[===] START IMAGE FITUR [===]//
+router.get('/image/welcome', async(req, res, next) => {
+  const apikey = req.query.apikey;
+  const nama = req.query.nama;
+  const descriminator = req.query.descriminator;
+  const memcount = req.query.memcount;
+  const gcname = req.query.gcname;
+  const bg = req.query.bg;
+  const pp = req.query.pp;
+  const gcicon = req.query.gcicon;
+  if(!nama) return res.json(msg.noNama)
+  if(!descriminator) return res.json(msg.noDescriminator)
+  if(!memcount) return res.json(msg.noMemcount)
+  if(!gcname) return res.json(msg.noGcname)
+  if(!bg) return res.json(msg.noBg)
+  if(!pp) return res.json(msg.noPp)
+  if(!gcicon) return res.json(msg.noGcicon)
+  if (apikey === undefined) return res.json(msg.noApikey);
+    const check = await cekKey(apikey);
+    if (!check) return res.json(msg.invalidApikey);
+    const limit = await isLimit(apikey);
+    if (limit) return res.json(msg.limit);
+    addRequest();
+  let hasil = `http://hadi-api.cf/api/card/welcome2?nama=${nama}&descriminator=${descriminator}&memcount=${memcount}&gcname=${gcname}&gcicon=${gcicon}&pp=${pp}&bg=${bg}`
+  data = await fetch(hasil).then(v => v.buffer())
+         await fs.writeFileSync(__path +'/tmp/welcome.png', data)
+        res.sendFile(__path+'/tmp/welcome.png')
+        limitAdd(apikey);
+    .catch(err => {
+      res.json(msg.error);
+    });
+    
+  } catch (err) {
+    console.log(err);
+    res.json(msg.error);
+  }
+});
 router.get('/image/pinterest', async (req, res, next) => {
   try {
     const apikey = req.query.apikey;
