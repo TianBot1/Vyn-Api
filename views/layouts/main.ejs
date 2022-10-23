@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<!---
+Mungkin buat lu gak berharga,
+Tapi Ini Buat Kami Sangat Berharga!!
+Hargai Buatan Orang
+
+Rasulullah shallallahu 'alaihi wasallam bersabda:
+"Barangsiapa mengaku-ngaku sesuatu yang bukan miliknya,
+Maka ia bukan dari golongan kami,
+Dan hendaklah ia menyiapkan tempat duduknya dalam neraka"
+
+Thanks To :
+• Nodejs
+• Npm
+• Github
+• Heroku
+• Loli Killers
+• RimuruBotz
+• Dark Coder Team
+--->
+<head>
+<meta charset="utf-8">
+<title>Apriliya Api - Free And Open Source Web API Project</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="" name="keywords">
+<meta content="" name="description">
+<!-- Favicon -->
+<link href="https://telegra.ph/file/f7bf43d50026469f55106.jpg" rel="icon">
+<!-- Google Web Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- Icon Font Stylesheet -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+<!-- Libraries Stylesheet -->
+<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+<link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+<!-- Customized Bootstrap Stylesheet -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- Template Stylesheet -->
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-xxl position-relative bg-white d-flex p-0">
+<!-- Spinner Start -->
+<div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+<div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+<span class="sr-only">Loading...</span>
+</div>
+</div>
+<!-- Spinner End -->
+<!-- Sidebar Start -->
+<div class="sidebar pe-4 pb-3">
+<nav class="navbar bg-light navbar-light">
+<a href="https://github.com/LoliKillers/Apriliya-Api" class="navbar-brand mx-4 mb-3">
+<h3 class="text-primary"><i class="fa fa-hashtag me-2"></i>Apriliya Api</h3>
+</a>
+<div class="d-flex align-items-center ms-4 mb-4">
+<div class="position-relative">
+<img class="rounded-circle" src="https://telegra.ph/file/f7bf43d50026469f55106.jpg" alt="" style="width: 40px; height: 40px;">
+</div>
+<div class="ms-3">
+<h6 class="mb-0">Web API's</h6>
+<span>Free & Opensource</span>
+</div>
+</div>
+<div class="navbar-nav w-100">
+<a href="/" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+<!--<div class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-mosque me-2"></i>Islami</a>
+<div class="dropdown-menu bg-transparent border-0">
+<small>
+<a href="/api/islami/list-surah?apikey=<%= x.apikey %>" class="dropdown-item">• List Surah</a>
+<a href="/api/islami/surah?apikey=<%= x.apikey %>&number=1" class="dropdown-item">• Surah</a>
+</small>
+</div>
+</div>
+-->
+<div class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-image me-2"></i>Image</a>
+<div class="dropdown-menu bg-transparent border-0">
+<small>
+<a href="/api/image/pinterest?apikey=<%= x.apikey %>&search=Loli" class="dropdown-item">1. Pinterest</a>
+<a href="/api/image/wallpaperflare?apikey=<%= x.apikey %>&search=Loli" class="dropdown-item">2. Wallpaper Flare</a>
+</small>
+</div>
+</div>
+
+<div class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-download me-2"></i>Downloader</a>
+<div class="dropdown-menu bg-transparent border-0">
+<small>
+<a href="/api/downloader/tiktok?apikey=<%= x.apikey %>&url=https://vt.tiktok.com/ZSwWCk5o/" class="dropdown-item">1. TikTok</a>
+<a href="/api/downloader/youtube_dl_mp3?apikey=<%= x.apikey %>&url=https://youtu.be/COh7wqu83P8" class="dropdown-item">2. Youtube Downloader Mp3</a>
+<a href="/api/downloader/youtube_dl_mp4?apikey=<%= x.apikey %>&url=https://youtu.be/COh7wqu83P8" class="dropdown-item">3. Youtube Downloader Mp4</a>
+<a href="/api/downloader/youtube_play_mp3?apikey=<%= x.apikey %>&search=One+Piece" class="dropdown-item">4. Youtube Play Mp3</a>
+<a href="/api/downloader/youtube_play_mp4?apikey=<%= x.apikey %>&search=One+Piece" class="dropdown-item">5. Youtube Play Mp4</a>
+</small>
+</div>
+</div>
+
+<div class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-info me-2"></i>Info</a>
+<div class="dropdown-menu bg-transparent border-0">
+<small>
+<a href="/api/info/gempa_terkini?apikey=<%= x.apikey %>" class="dropdown-item">1. Gempa Terkini</a>
+</small>
+</div>
+</div>
+
+<div class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-search me-2"></i>Search</a>
+<div class="dropdown-menu bg-transparent border-0">
+<small>
+<a href="/api/search/github_repo?apikey=<%= x.apikey %>&search=Apriliya-Api" class="dropdown-item">1. Repo Github</a>
+</small>
+</div>
+</div>
+
+<!--<div class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-book me-2"></i>Education</a>
+<div class="dropdown-menu bg-transparent border-0">
+<small>
+<a href="/api/education/search?apikey=<%= x.apikey %>&search=manusia" class="dropdown-item">• Search</a> 
+</small>
+</div>
+</div>-->
+<div class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-cat me-2"></i>Anime</a>
+<div class="dropdown-menu bg-transparent border-0">
+<small>
+<a href="/api/anime/otakudesu?apikey=<%= x.apikey %>&anime=One+Piece" class="dropdown-item">1. Otakudesu</a> 
+<a href="/api/anime/anoboy?apikey=<%= x.apikey %>&anime=One+Piece" class="dropdown-item">2. Anoboy</a> 
+<a href="/api/anime/mal_top_airing?apikey=<%= x.apikey %>" class="dropdown-item">3. MAL Top Anime</a> 
+<a href="/api/anime/mal_top_airing?apikey=<%= x.apikey %>" class="dropdown-item">4. MAL Top Airing</a> 
+<a href="/api/anime/mal_search_anime?apikey=<%= x.apikey %>&anime=One+Piece" class="dropdown-item">5. MAL Search Anime</a> 
+<a href="/api/anime/mal_search_manga?apikey=<%= x.apikey %>&manga=One+Piece" class="dropdown-item">6. MAL Search Manga</a> 
+</small>
+</div>
+</div>
+<!--
+<div class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-random me-2"></i>Random</a>
+<div class="dropdown-menu bg-transparent border-0">
+<small>
+<a href="/api/random/blush?apikey=<%= x.apikey %>" class="dropdown-item">• blush</a> 
+<a href="/api/random/bite?apikey=<%= x.apikey %>" class="dropdown-item">• bite</a> 
+<a href="/api/random/baka?apikey=<%= x.apikey %>" class="dropdown-item">• baka</a> 
+<a href="/api/random/waifu?apikey=<%= x.apikey %>" class="dropdown-item">• waifu</a> 
+<a href="/api/random/kitsune?apikey=<%= x.apikey %>" class="dropdown-item">• kitsune</a> 
+<a href="/api/random/neko?apikey=<%= x.apikey %>" class="dropdown-item">• neko</a> 
+</small>
+</div>
+</div>
+-->
+<div class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-retweet me-2"></i>Convert</a>
+<div class="dropdown-menu bg-transparent border-0">
+<small>
+<a href="/api/convert/emoji_to_png?apikey=<%= x.apikey %>&emoticon=😀" class="dropdown-item">1. Emoji To Png</a> 
+<a href="/api/convert/gtts?apikey=<%= x.apikey %>&lang=id&text=Hello+World" class="dropdown-item">2. Goole Text To Speech</a> 
+</small>
+</div>
+</div>
+<!--
+<div class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-info me-2"></i>uploader</a>
+<div class="dropdown-menu bg-transparent border-0">
+<small>
+<a href="/api/uploader/fileungu?apikey=<%= x.apikey %>" class="dropdown-item">• File ungu</a> 
+</small>
+</div>
+</div>
+-->
+<!--
+<div class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-lock me-2"></i>crypto</a>
+<div class="dropdown-menu bg-transparent border-0">
+<small>
+<a href="/api/crypto/decode64?apikey=<%= x.apikey %>" class="dropdown-item">• decode64</a> 
+<a href="/api/crypto/decode32?apikey=<%= x.apikey %>" class="dropdown-item">• decode32</a> 
+<a href="/api/crypto/encode64?apikey=<%= x.apikey %>" class="dropdown-item">• encode64</a> 
+<a href="/api/crypto/encode32?apikey=<%= x.apikey %>" class="dropdown-item">• encode32</a> 
+</small>
+</div>
+</div>
+-->
+<br>
+<br>
+<br>
+<br>
+</div>
+</nav>
+</div>
+<!-- Sidebar End -->
+<!-- Content Start -->
+<div class="content">
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
+<a href="https://github.com/LoliKillers/Apriliya-Api" class="navbar-brand d-flex d-lg-none me-4">
+<h2 class="text-primary mb-0"><i class="fa fa-code"></i></h2>
+</a>
+<a href="#" class="sidebar-toggler flex-shrink-0">
+<i class="fa fa-bars"></i>
+</a>
+<div class="navbar-nav align-items-center ms-auto">
+<div class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+<i class="fa fa-bell me-lg-2"></i>
+<span class="d-none d-lg-inline-flex">Notificatin</span>
+</a>
+<div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+<a href="#" class="dropdown-item">
+<h6 class="fw-normal mb-0">Created Project</h6>
+<small>24 Agustus 2021</small>
+</a>
+<hr class="dropdown-divider">
+<a href="#" class="dropdown-item">
+<h6 class="fw-normal mb-0">Project ini 100% gratis!!</h6>
+<small>8 Agustus 2022</small>
+</a>
+</div>
+</div>
+<div class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+<img class="rounded-circle me-lg-2" src="https://telegra.ph/file/f7bf43d50026469f55106.jpg" alt="" style="width: 40px; height: 40px;">
+<span class="d-none d-lg-inline-flex">Apriliya Api</span>
+</a>
+<div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+<a href="/logout" class="dropdown-item">Log Out</a>
+</div>
+</div>
+</div>
+</nav>
+
+<%- body %>
+
+<div class="container-fluid pt-4 px-4">
+<div class="bg-light rounded-top p-4">
+<div class="row">
+<div class="col-12 col-sm-6 text-center text-sm-start">
+&copy; <a href="https://april-api.herokuapp.com">Apriliya Api</a>, All Right Reserved. 
+</div>
+<div class="col-12 col-sm-6 text-center text-sm-end">
+<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+Designed By <a href="https://github.com/LoliKillers">Loli Killers</a>
+</br>
+Distributed By <a class="border-bottom" href="https://darkcoder.xyz" target="_blank">Dark Coder</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer End -->
+</div>
+<!-- Content End -->
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+</div>
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="lib/chart/chart.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="lib/tempusdominus/js/moment.min.js"></script>
+<script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+<script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
+</body>
+
+</html>
