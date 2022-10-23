@@ -1,5 +1,5 @@
 {
-  "name": "Apriliya Api",
+  "name": "Vyn Api",
   "description": "Free An Open Source code web API.",
   "keywords": [
     "webapi",
@@ -8,23 +8,23 @@
     "npm"
   ],
   "website": "https://darkcoder.xyz/",
-  "repository": "https://github.com/LoliKillers/Apriliya-Api",
-  "logo": "https://avatars.githubusercontent.com/u/80396688?v=4",
+  "repository": "https://github.com/TianBot1/Vyn-Api",
+  "logo": "https://i.ibb.co/DMYqKGK/a878bb84ecd1.jpg",
   "env": {
     "DB_URI": {
       "description": "URI Database Mongodb, Buat Datababase Mongodb Di https://www.mongodb.com Dan Berikan Access Dari Manapun.",
       "required": true,
-      "value": ""
+      "value": "mongodb+srv://christianid:Tl1Ft9wcnXBqc8Mo@cluster0.xmq4gst.mongodb.net/?retryWrites=true&w=majority"
     },
     "CODER_NAME": {
       "description": "Isi Dengan Nama Anda.",
       "required": true,
-      "value": "Loli Killers"
+      "value": "Chris Vyn"
     },
     "LIMIT_USER": {
       "description": "Limit Pengguna Gratisan.",
       "required": true,
-      "value": "100"
+      "value": "50"
     },
     "LIMIT_PREMIUM": {
       "description": "Limit Pengguna Premium.",
@@ -39,7 +39,7 @@
     "KEY": {
       "description": "kata Kunci Untuk Menambahkan Pengguna Premium",
       "required": true,
-      "value": ""
+      "value": "VYNPREM"
     }
   },
   "image": "heroku/nodejs",

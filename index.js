@@ -77,7 +77,7 @@ app.use(function(req, res, next){
   res.status(404);
   res.send({
     statusCode: 404,
-    coder: 'Loli Killers',
+    coder: 'Chris Vyn',
     error: {
       message: 'Opss!!, url/link/halaman yang anda minta tidak ada di server!!'
     }
@@ -87,7 +87,7 @@ app.use(function(req, res, next){
   res.status(403);
   res.send({
     statusCode: 403,
-    coder: 'Loli Killers',
+    coder: 'Chris Vyn',
     error: {
       message: 'Kamu tidak memiliki izin untuk mengakses url/link/halaman ini!!'
     }
@@ -97,7 +97,7 @@ app.use(function(req, res, next){
   res.status(500);
   res.send({
     statusCode: 500,
-    coder: 'Loli Killers',
+    coder: 'Chris Vyn',
     error: {
       message: 'Internal server error!'
     }
